@@ -1,0 +1,11 @@
+{
+  
+  "engines": {
+    "node": "22"
+  },
+  "name": "project-tetoless",
+  "version": "4.26.0",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
