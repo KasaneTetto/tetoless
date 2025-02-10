@@ -1,5 +1,1 @@
-module.exports {
-    getAclType {
-// 대충 perm:admin 같은거 가져오는 코드
-    }
-}
+import { types } from '../type.js';
