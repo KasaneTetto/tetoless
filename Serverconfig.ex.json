@@ -1,3 +1,6 @@
 {
-    "disable_ipv6": true
+    "enable_multithreading": true,
+    "disable_ipv6": true,
+    "protect_owner_perm": true,
+    "use_namuwiki": true
 }
