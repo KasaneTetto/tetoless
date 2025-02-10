@@ -6,3 +6,4 @@
   * the seed 보완
  * 자유롭게 활용 가능한 엔진
  * 생 html css js만 사용하기(시도)
+ * esm 및 es6 완?벽 숙지
