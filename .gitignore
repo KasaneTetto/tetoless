@@ -1,6 +1,4 @@
 /node_modules/
 .env
-PublicConfig.json
-ServiceConfig.json
-APIConfig.json
 ServerConfig.json
+EngineConfjg.json
