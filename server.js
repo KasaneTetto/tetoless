@@ -12,7 +12,7 @@ dotenv.config();
 const host = process.env.HOST;
 const port = process.env.PORT;
 const dbtype = process.env.DB_TYPE;
-const pgsql = await service.pgInit();
+// TODO: 이거 작동하게 수정 const pgsql = await service.pgInit;
 const app = express();
 
 if(dbtype === 'pg') {
