@@ -4,9 +4,10 @@ Copyright 2025 적기 귀찮으니 알아서 기억하쇼 ㅇㅇ*/
 
 // import acl from './utils/function/acl';
 import express from 'express';
+import dotenv from 'dotenv';
 import pg from 'pg';
 
-require('dotenv').config;
+dotenv.config();
 
 const host = process.env.HOST;
 const port = process.env.PORT;
@@ -18,4 +19,10 @@ if(dbtype === 'pg') {
     process.exit(1);
 }
 
-app.listen()
+app.get('*', (req, res) => {
+    res.json('content: どら焼きは主食になれない')
+});
+
+app.listen(port, host, () => {
+    console.log(`엔진 구동중: ${host}:${port}`);
+});
