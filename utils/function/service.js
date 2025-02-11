@@ -1,5 +1,5 @@
-export const service = {
-    pgInit: {
+export default function service() {
+    const pgInit = {
         "user": process.env.DB_USERID,
         "host": process.env.DB_HOST,
         "database": process.env.DB_NAME,
