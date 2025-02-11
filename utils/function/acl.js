@@ -1,25 +1,31 @@
 import { ACLType, ACLExecuteType, ACLPermType } from '../type.js';
 
-function getACLType(ACLType) {
-  let ACLIndex = '';
+function getACLType(aclType) {
+  let aclIndex = null;
   
-  if(ACLType === 1) {
+  if (aclType === 1) {
     ACLIndex = 'user';
-  } else if(ACLType === 2) {
+  } else if (aclType === 2) {
     ACLIndex = 'geoip';
-  } else if(ACLType === 3) {
+  } else if (aclType === 3) {
     ACLIndex = 'aclgroup';
-  } else if(ACLType === 4) {
+  } else if (ACLType === 4) {
     ACLIndex = 'ip';
-  } else ACLIndex = null;
+  }
   
   return ACLIndex;
 }
 
-function getACLExecuteType(ACLIndex) {
-  if(ACLIndex === null) return getACLPerm(ACLExecuteType);
+function getACLExecuteType(ACLExecuteType) {
+
 }
 
-function getACLPerm(ACLExecuteType) {
-  // 귀찮아
+function getACLPerm(perm) {
+// TODO: ACL 권한 인덱스값 
 }
+
+export const ACLFunction = {
+  getACLType,
+  getACLExecuteType,
+  getACLPerm
+};
