@@ -12,7 +12,7 @@ dotenv.config();
 const host = process.env.HOST;
 const port = process.env.PORT;
 const dbtype = process.env.DB_TYPE;
-// TODO: 이거 작동하게 수정 const pgsql = await service.pgInit;
+const pgsql = await service.pgInit;
 const app = express();
 
 if(dbtype === 'pg') {
@@ -27,7 +27,3 @@ app.get('*', (req, res) => {
 app.listen(port, host, () => {
     console.log(`엔진 구동중: ${host}:${port}`);
 });
-
-export const Init = {
-    pgInit
-}
