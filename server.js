@@ -3,6 +3,7 @@
 Copyright 2025 적기 귀찮으니 알아서 기억하쇼 ㅇㅇ*/
 
 // import acl from './utils/function/acl';
+import { pgInit } from './utils/function/service';
 import express from 'express';
 import dotenv from 'dotenv';
 import pg from 'pg';
@@ -12,14 +13,7 @@ dotenv.config();
 const host = process.env.HOST;
 const port = process.env.PORT;
 const dbtype = process.env.DB_TYPE;
-const pgInit = {
-    "user": process.env.DB_USERID,
-    "host": process.env.DB_HOST,
-    "database": process.env.DB_NAME,
-    "password": process.env.DB_PASSWD,
-    "port": process.env.DB_PORT
-
-};
+const pgsql = await pgInit();
 const app = express();
 
 if(dbtype === 'pg') {
