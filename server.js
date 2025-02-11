@@ -12,6 +12,14 @@ dotenv.config();
 const host = process.env.HOST;
 const port = process.env.PORT;
 const dbtype = process.env.DB_TYPE;
+const pgInit = {
+    "user": process.env.DB_USERID,
+    "host": process.env.DB_HOST,
+    "database": process.env.DB_NAME,
+    "password": process.env.DB_PASSWD,
+    "port": process.env.DB_PORT
+
+};
 const app = express();
 
 if(dbtype === 'pg') {
@@ -26,3 +34,7 @@ app.get('*', (req, res) => {
 app.listen(port, host, () => {
     console.log(`엔진 구동중: ${host}:${port}`);
 });
+
+export const Init = {
+    pgInit
+}
