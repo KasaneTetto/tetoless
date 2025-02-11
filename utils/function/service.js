@@ -5,6 +5,5 @@ export const service = {
         "database": process.env.DB_NAME,
         "password": process.env.DB_PASSWD,
         "port": process.env.DB_PORT
-    
     }
 }
