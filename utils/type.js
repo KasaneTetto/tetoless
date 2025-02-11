@@ -4,7 +4,7 @@ export const types = {
         "ip": 1,
         "author": 2
     },
-    ACLType: {
+/*    ACLType: {
         "perm": 0,
         "user": 1,
         "geoip": 2,
@@ -26,5 +26,5 @@ export const types = {
         "contributor": 6,
         "admin": 7,
         "ip": 8
-    }
+    } */
 };
